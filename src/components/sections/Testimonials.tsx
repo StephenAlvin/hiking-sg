@@ -24,9 +24,9 @@ export function Testimonials() {
           subtitle="Hear what past adventurers have to say about their experiences"
         />
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {/* Desktop Testimonials */}
-          <div className="hidden md:grid grid-cols-2 gap-6">
+          <div className="hidden md:grid grid-cols-3 gap-6">
             {TESTIMONIALS.map((testimonial) => (
               <Card key={testimonial.id} className="overflow-hidden">
                 <CardContent className="p-6">

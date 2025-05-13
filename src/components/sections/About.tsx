@@ -1,15 +1,15 @@
-import { Container } from '@/components/layout/Container';
-import { SectionHeading } from '@/components/shared/SectionHeading';
-import { Check } from 'lucide-react';
-import AboutMeImage from '@/assets/about-me.jpg';
+import { Container } from "@/components/layout/Container";
+import { SectionHeading } from "@/components/shared/SectionHeading";
+import { Check } from "lucide-react";
+import AboutMeImage from "@/assets/about-me.jpg";
 
 export function About() {
   const expertise = [
-    "Certified Nature Guide",
-    "Wilderness First Aid Trained",
-    "6+ Years of Trail Experience",
-    "Local Ecology Specialist",
-    "Conservation Advocate"
+    "5+ Years of Trail Experience",
+    "Passionate Nature Enthusiast",
+    "Local Hidden Trails Expert",
+    "Singapore Flora & Fauna Knowledge",
+    "Conservation Advocate",
   ];
 
   return (
@@ -27,24 +27,31 @@ export function About() {
 
           {/* Content */}
           <div>
-            <SectionHeading 
-              title="Meet Stephen Alvin" 
-              subtitle="Your Expert Singapore Trail Guide"
+            <SectionHeading
+              title="Meet Stephen Alvin"
+              subtitle="Your Expert Singapore Hiking Guide"
               centered={false}
             />
 
             <div className="space-y-4 text-lg">
               <p>
-                Born and raised in Singapore, I've spent the last decade exploring every hidden 
-                trail and natural wonder this island has to offer. What started as weekend 
-                adventures became my passion and profession.
+                Raised in Singapore, I've spent the last decade exploring every
+                hidden trail and natural wonder this island has to offer. What
+                started as weekend adventures became my passion and profession.
               </p>
-              
+
               <p>
-                Having guided over 500 hiking experiences, I specialize in creating memorable 
-                adventures that balance nature exploration, wildlife spotting, and local history. 
-                My trails are designed for all ages and fitness levels.
+                Having guided countless hiking experiences, I specialize in
+                creating memorable adventures that balance nature exploration,
+                wildlife spotting, and local history. My trails are designed for
+                all ages and fitness levels.
               </p>
+
+              <p className="italic">
+                ← Disclaimer, that's not Singapore, that's just me in Bali
+              </p>
+
+              <br/>
 
               <div className="mt-6">
                 <h3 className="text-xl font-semibold mb-3">My Expertise:</h3>
