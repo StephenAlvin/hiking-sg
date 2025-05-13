@@ -1,44 +1,52 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Toaster } from '@/components/ui/toaster';
-import { ThemeProvider } from '@/components/ThemeProvider';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import HomePage from '@/pages/HomePage';
-import TrailsPage from '@/pages/TrailsPage';
-import PackagesPage from '@/pages/PackagesPage';
-import AboutPage from '@/pages/AboutPage';
-import BlogPage from '@/pages/BlogPage';
-import BlogPostPage from '@/pages/BlogPostPage';
-import ContactPage from '@/pages/ContactPage';
-import FAQPage from '@/pages/FAQPage';
-import BookingPage from '@/pages/BookingPage';
-import ScrollToTop from '@/components/utils/ScrollToTop';
+import { Header } from '@/components/sections/Header';
+import { Hero } from '@/components/sections/Hero';
+import { About } from '@/components/sections/About';
+import { TrailPackages } from '@/components/sections/TrailPackages';
+import { Gallery } from '@/components/sections/Gallery';
+import { Testimonials } from '@/components/sections/Testimonials';
+import { Contact } from '@/components/sections/Contact';
+import { Footer } from '@/components/sections/Footer';
+import { useEffect } from 'react';
 
 function App() {
+  // Implement smooth scrolling
+  useEffect(() => {
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const link = target.closest('a');
+      
+      if (link && link.hash && link.hash.startsWith('#')) {
+        e.preventDefault();
+        const targetId = link.hash.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+    
+    return () => document.removeEventListener('click', handleAnchorClick);
+  }, []);
+
   return (
-    <ThemeProvider defaultTheme="light" storageKey="hiking-theme">
-      <Router>
-        <ScrollToTop />
-        <div className="flex min-h-screen flex-col bg-background">
-          <Navbar />
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/trails" element={<TrailsPage />} />
-              <Route path="/packages" element={<PackagesPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/blog/:slug" element={<BlogPostPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/faq" element={<FAQPage />} />
-              <Route path="/booking" element={<BookingPage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-        <Toaster />
-      </Router>
-    </ThemeProvider>
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <TrailPackages />
+        <Gallery />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
