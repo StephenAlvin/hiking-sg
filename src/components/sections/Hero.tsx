@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/layout/Container';
 import { ArrowRight } from 'lucide-react';
+import HeroImage from '@/assets/hero-image.jpg';
 
 export function Hero() {
   return (
@@ -11,7 +12,7 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.pexels.com/photos/5241063/pexels-photo-5241063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={HeroImage}
           alt="Singapore hiking trail"
           className="w-full h-full object-cover"
         />
@@ -23,7 +24,7 @@ export function Hero() {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-up">
             Discover Singapore's 
-            <span className="text-yellow-300"> Hidden Trails!</span>
+            <span className="text-yellow-300"> Hidden Trails</span>
           </h1>
           
           <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto animate-fade-up animation-delay-100">
@@ -36,7 +37,7 @@ export function Hero() {
               Start Your Adventure
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+            <Button size="lg" variant="outline" className="border-white text-primary hover:bg-white/20">
               Explore Trails
             </Button>
           </div>

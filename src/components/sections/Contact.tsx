@@ -80,8 +80,8 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:stephen@trailswithstephen.sg" className="text-primary hover:underline">
-                      stephen@trailswithstephen.sg
+                    <a href="mailto:stephenalvin0912@gmail.com" className="text-primary hover:underline">
+                      stephenalvin0912@gmail.com
                     </a>
                   </div>
                 </div>

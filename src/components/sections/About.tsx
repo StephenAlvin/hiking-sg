@@ -1,6 +1,7 @@
 import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/shared/SectionHeading';
 import { Check } from 'lucide-react';
+import AboutMeImage from '@/assets/about-me.jpg';
 
 export function About() {
   const expertise = [
@@ -18,7 +19,7 @@ export function About() {
           {/* Image */}
           <div className="rounded-lg overflow-hidden shadow-xl">
             <img
-              src="https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src={AboutMeImage}
               alt="Stephen Alvin, Hiking Guide"
               className="w-full h-full object-cover aspect-[4/5]"
             />

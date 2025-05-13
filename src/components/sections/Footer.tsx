@@ -13,7 +13,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Compass className="h-8 w-8 text-primary" />
-              <span className="font-bold text-xl">TrailsWithStephen</span>
+              <span className="font-bold text-xl">HikeWithStephen</span>
             </div>
             <p className="text-muted-foreground mb-4">
               Explore Singapore's hidden natural beauty with expert-guided hiking experiences.
@@ -34,7 +34,7 @@ export function Footer() {
                 <MessageCircle className="h-5 w-5" />
               </a>
               <a 
-                href="mailto:stephen@trailswithstephen.sg" 
+                href="mailto:stephenalvin0912@gmail.com" 
                 className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -116,7 +116,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {currentYear} TrailsWithStephen. All rights reserved.</p>
+          <p>© {currentYear} HikeWithStephen. All rights reserved.</p>
         </div>
       </Container>
     </footer>

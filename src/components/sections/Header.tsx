@@ -23,16 +23,16 @@ export function Header() {
       className={cn(
         'fixed top-0 left-0 w-full z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-white/95 backdrop-blur-sm shadow-sm dark:bg-background/95'
-          : 'bg-transparent'
+          ? 'bg-white/95 backdrop-blur-xs shadow-sm dark:bg-background/95'
+          : 'bg-black/30 backdrop-blur-xs'
       )}
     >
       <Container>
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-5">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <Compass className="h-8 w-8 text-primary" />
-            <span className="font-bold text-xl md:text-2xl">TrailsWithStephen</span>
+            <Compass className={cn("h-8 w-8", isScrolled ? "text-primary" : "text-white")} />
+            <span className={cn("font-bold text-xl md:text-2xl", isScrolled ? "" : "text-white")}>HikeWithStephen</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -41,17 +41,22 @@ export function Header() {
               <a
                 key={link.id}
                 href={link.href}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium"
+                className={cn(
+                  "transition-colors font-medium",
+                  isScrolled 
+                    ? "text-foreground/80 hover:text-primary" 
+                    : "text-white hover:text-primary-foreground"
+                )}
               >
                 {link.title}
               </a>
             ))}
-            <Button>Book Your Trail</Button>
+            <Button className={isScrolled ? "" : "bg-primary text-primary-foreground hover:bg-primary/90"}>Book Your Trail</Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground p-2"
+            className={cn("md:hidden p-2", isScrolled ? "text-foreground" : "text-white")}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
