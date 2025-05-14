@@ -5,9 +5,9 @@ import AboutMeImage from "@/assets/about-me.jpg";
 
 export function About() {
   const expertise = [
+    "Local Hidden Trails Expert",
     "5+ Years of Trail Experience",
     "Passionate Nature Enthusiast",
-    "Local Hidden Trails Expert",
     "Singapore Flora & Fauna Knowledge",
     "Conservation Advocate",
   ];
@@ -45,10 +45,6 @@ export function About() {
                 creating memorable adventures that balance nature exploration,
                 wildlife spotting, and local history. My trails are designed for
                 all ages and fitness levels.
-              </p>
-
-              <p className="italic">
-                ← Disclaimer, that's not Singapore, that's just me in Bali
               </p>
 
               <br/>

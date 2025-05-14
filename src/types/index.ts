@@ -8,12 +8,12 @@ export type TrailPackage = {
   id: string;
   title: string;
   description: string;
-  price: number;
-  duration: string;
-  difficulty: 'Easy' | 'Moderate' | 'Challenging' | 'Difficult';
+  price: number | string;
+  difficulty: 'Easy' | 'Moderate' | 'Challenging' | 'Difficult' | 'Depends' | 'Custom';
   included: string[];
   excluded: string[];
   imageUrl: string;
+  duration: string;
 };
 
 export type TestimonialType = {
@@ -30,4 +30,5 @@ export type GalleryImage = {
   imageUrl: string;
   caption: string;
   category: string;
+  size?: 'small' | 'medium' | 'large' | 'tall' | 'wide';
 };

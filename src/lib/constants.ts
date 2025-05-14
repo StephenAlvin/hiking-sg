@@ -1,23 +1,38 @@
 import { NavLink, TrailPackage, TestimonialType, GalleryImage } from "@/types";
+
+// Testimonials
 import MayaImage from "@/assets/testimonials/maya.jpg";
 import PhilipImage from "@/assets/testimonials/philip.jpg";
 import JohnImage from "@/assets/testimonials/john.jpg";
+
+// Gallery
 import SunRaysImage from "@/assets/gallery/sun-rays.jpg";
 import BukitBrownHighwayImage from "@/assets/gallery/bukit-brown-highway.jpg";
 import BukitBrownTempleImage from "@/assets/gallery/bukit-brown-temple.jpg";
-import LuckyCharmsImage from "@/assets/gallery/lucky-charms.jpg";
+import TalismansImage from "@/assets/gallery/talismans-bukit-brown.jpg";
 import HendersonWavesImage from "@/assets/gallery/henderson-waves.jpg";
-import GrayCautionImage from "@/assets/gallery/gray_caution.jpg";
-import GrayPuddleJumpImage from "@/assets/gallery/gray_puddle-jump.jpg";
-import GrayMrtInForestImage from "@/assets/gallery/gray_mrt-in-forest.jpg";
-import GrayTrialBesideHdbImage from "@/assets/gallery/gray_trial-beside-hdb.jpg";
-import GrayRailwayFeetImage from "@/assets/gallery/gray_railway-feet.jpg";
+import MonkeyMacritchieImage from "@/assets/gallery/monkey-macritchie.jpg";
+import ThompsonParkImage from "@/assets/gallery/thompson-park.jpg";
+import AbandonedCarBukitBrownImage from "@/assets/gallery/abandoned-car-bukit-brown.jpg";
+import ClementiForestTrailImage from "@/assets/gallery/clementi-forest-trail-backview.jpg";
+import MtFaberKeppelHillImage from "@/assets/gallery/mt-faber-keppel-hill.jpg";
+import BukitTimahTrialImage from "@/assets/gallery/bukit-timah-trial.webp";
+// Gray images
+import OldJurongRailwayImage from "@/assets/gallery/gray_old-jurong-railway.jpg";
+import FormerBukitTimahRailwayImage from "@/assets/gallery/gray_former-bukit-timah-railway.jpg";
 import GrayPipelineImage from "@/assets/gallery/gray_pipeline.jpg";
-import GrayJurongRailwayTracksOldImage from "@/assets/gallery/gray_jurong-railway-tracks-old.jpg";
-import BukitTimahImage from "@/assets/packages/bukit-timah.webp";
-import TreetopWalkImage from "@/assets/packages/treetop-walk.jpg";
+import TampinesEcoGreenImage from "@/assets/gallery/gray_tampines-eco-green.jpg";
+import TampinesEcoGreen2Image from "@/assets/gallery/gray_tampines-eco-green-2.jpg";
+
+// Packages
+import GrayPuddleJumpImage from "@/assets/packages/gray_puddle-jump.jpg";
 import PulauUbinImage from "@/assets/packages/pulau-ubin-puaka-hill.jpg";
-import MtFaberImage from "@/assets/packages/mt-faber.jpeg";
+import ClementiForestImage from "@/assets/packages/clementi-forest.jpg";
+import KeppelHillImage from "@/assets/packages/keppel-hill.jpg";
+import AvatarTreesImage from "@/assets/packages/avatar-trees.jpg";
+import MandaiT15Image from "@/assets/packages/mandai-t15.jpg";
+import ChestnutNatureParkImage from "@/assets/packages/chestnut-tower.jpg";
+import PipelineTrailImage from "@/assets/packages/pipeline-trail.jpg";
 
 export const NAV_LINKS: NavLink[] = [
   { id: "home", title: "Home", href: "#hero" },
@@ -28,94 +43,115 @@ export const NAV_LINKS: NavLink[] = [
   { id: "contact", title: "Contact", href: "#contact" },
 ];
 
+const defaultIncluded = [
+  "Professional guide",
+  "Water bottle",
+  "Hiking pole",
+  "Photos from the hike",
+];
+
+const defaultExcluded = [
+  "Transportation to/from meeting point",
+  "Personal insurance",
+  "Additional food/drinks",
+];
+
 export const TRAIL_PACKAGES: TrailPackage[] = [
   {
-    id: "bukit-timah",
-    title: "Bukit Timah Nature Reserve",
+    id: "personalized-experience",
+    title: "Custom Made",
     description:
-      "Explore Singapore's highest hill with diverse flora and fauna in this pristine nature reserve.",
-    price: 85,
-    duration: "3 hours",
-    difficulty: "Moderate",
-    included: [
-      "Professional guide",
-      "Water bottle",
-      "Snacks",
-      "Wildlife spotting guide",
-      "Photos of your experience",
-    ],
-    excluded: [
-      "Transportation to/from meeting point",
-      "Personal insurance",
-      "Additional food/drinks",
-    ],
-    imageUrl: BukitTimahImage,
+      "I will tailor a hike to your interests and fitness level, uniquely for you.",
+    price: "50~",
+    duration: "Custom",
+    difficulty: "Custom",
+    included: defaultIncluded,
+    excluded: defaultExcluded,
+    imageUrl: GrayPuddleJumpImage,
   },
   {
-    id: "macritchie",
-    title: "MacRitchie TreeTop Walk",
+    id: "bukit-brown",
+    title: "Bukit Brown Avatar Trees",
     description:
-      "Walk among the treetops on this iconic suspended bridge and discover hidden wildlife.",
-    price: 95,
+      "Discover Singapore's historic cemetery with cultural heritage and abundant nature.",
+    price: 45,
+    duration: "3 hours",
+    difficulty: "Moderate",
+    included: defaultIncluded,
+    excluded: defaultExcluded,
+    imageUrl: AvatarTreesImage,
+  },
+  {
+    id: "clementi-forest",
+    title: "Clementi Forest",
+    description:
+      "Venture through this untouched secondary forest with lush greenery and diverse ecosystems.",
+    price: 45,
+    duration: "3-4 hours",
+    difficulty: "Moderate",
+    included: defaultIncluded,
+    excluded: defaultExcluded,
+    imageUrl: ClementiForestImage,
+  },
+  {
+    id: "keppel-hill",
+    title: "Keppel Hill",
+    description:
+      "Discover the hidden gems of Keppel Hill including a forgotten reservoir, abandoned swimming pool, and mysterious tombstone amidst lush greenery.",
+    price: 50,
+    duration: "1 hour",
+    difficulty: "Moderate",
+    included: defaultIncluded,
+    excluded: defaultExcluded,
+    imageUrl: KeppelHillImage,
+  },
+  {
+    id: "mandai-t15",
+    title: "Mandai T15",
+    description:
+      "Explore the hidden Mandai T15 trail with unique wildlife and peaceful forest surroundings.",
+    price: 65,
+    duration: "4 hours",
+    difficulty: "Easy",
+    included: defaultIncluded,
+    excluded: defaultExcluded,
+    imageUrl: MandaiT15Image,
+  },
+  {
+    id: "chestnut-nature-park",
+    title: "Chestnut Nature Park",
+    description:
+      "Experience Singapore's largest nature park with dedicated mountain biking and hiking trails.",
+    price: 55,
+    duration: "3 hours",
+    difficulty: "Easy",
+    included: defaultIncluded,
+    excluded: defaultExcluded,
+    imageUrl: ChestnutNatureParkImage,
+  },
+  {
+    id: "pipeline-trail",
+    title: "Pipeline Trail",
+    description:
+      "Walk along this unique trail following Singapore's historic water pipeline through lush greenery.",
+    price: 45,
     duration: "4 hours",
     difficulty: "Moderate",
-    included: [
-      "Professional guide",
-      "Water bottle",
-      "Energy bars",
-      "Entrance fees",
-      "Photos of your experience",
-    ],
-    excluded: [
-      "Transportation to/from meeting point",
-      "Personal insurance",
-      "Additional food/drinks",
-    ],
-    imageUrl: TreetopWalkImage,
+    included: defaultIncluded,
+    excluded: defaultExcluded,
+    imageUrl: PipelineTrailImage,
   },
   {
     id: "pulau-ubin",
-    title: "Pulau Ubin Adventure",
+    title: "Pulau Ubin Island",
     description:
       "Step back in time on this rustic island and experience Singapore as it was decades ago.",
-    price: 120,
+    price: 85,
     duration: "6 hours",
-    difficulty: "Easy",
-    included: [
-      "Professional guide",
-      "Ferry tickets",
-      "Bicycle rental",
-      "Lunch at local eatery",
-      "Photos of your experience",
-    ],
-    excluded: [
-      "Transportation to/from ferry terminal",
-      "Personal insurance",
-      "Additional activities",
-    ],
+    difficulty: "Moderate",
+    included: defaultIncluded,
+    excluded: defaultExcluded,
     imageUrl: PulauUbinImage,
-  },
-  {
-    id: "southern-ridges",
-    title: "Southern Ridges Explorer",
-    description:
-      "Connect multiple parks across Singapore's southern ridge with stunning city views.",
-    price: 75,
-    duration: "3.5 hours",
-    difficulty: "Easy",
-    included: [
-      "Professional guide",
-      "Water bottle",
-      "Snacks",
-      "Architectural insights",
-      "Photos of your experience",
-    ],
-    excluded: [
-      "Transportation to/from meeting point",
-      "Personal insurance",
-      "Additional food/drinks",
-    ],
-    imageUrl: MtFaberImage,
   },
 ];
 
@@ -125,8 +161,8 @@ export const TESTIMONIALS: TestimonialType[] = [
     name: "John Lee",
     rating: 5,
     comment:
-      "Our hike through Bukit Timah so informative and fun! He knew exactly where to spot wildlife and shared fascinating stories about Singapore's nature.",
-    trail: "Bukit Timah Nature Reserve",
+      "Our hike through Clementi Forest was so informative and fun! Stephen shared fascinating stories about Singapore's nature.",
+    trail: "Clementi Forest",
     imageUrl: JohnImage,
   },
   {
@@ -134,8 +170,8 @@ export const TESTIMONIALS: TestimonialType[] = [
     name: "Maya",
     rating: 5,
     comment:
-      "The TreeTop Walk was magical! Stephen ensured we had the perfect timing to avoid crowds and his knowledge of local wildlife made the experience unforgettable.",
-    trail: "MacRitchie TreeTop Walk",
+      "Bukit Brown was a great hike! Stephen was very knowledgeable and shared interesting stories about the history of the area.",
+    trail: "Bukit Brown Avatar Trees",
     imageUrl: MayaImage,
   },
   {
@@ -143,8 +179,8 @@ export const TESTIMONIALS: TestimonialType[] = [
     name: "Philip Wee",
     rating: 4,
     comment:
-      "Our family had a wonderful day exploring Pulau Ubin with Stephen. He was great with our kids and showed us places we would never have discovered on our own.",
-    trail: "Pulau Ubin Adventure",
+      "Pulau Ubin was really nice and peaceful. We got to do a bit of hiking and ended with a picnic by the beach.",
+    trail: "Pulau Ubin Island",
     imageUrl: PhilipImage,
   },
 ];
@@ -153,73 +189,91 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: "1",
     imageUrl: SunRaysImage,
-    caption: "Sunlight filtering through the forest canopy",
+    caption: "Sunlight streaming through forest canopy",
     category: "landscapes",
   },
   {
     id: "2",
     imageUrl: BukitBrownHighwayImage,
-    caption: "Bukit Brown cemetery with highway overhead",
+    caption: "Bukit Brown cemetery with PIE highway overhead",
     category: "landscapes",
   },
   {
     id: "3",
     imageUrl: BukitBrownTempleImage,
-    caption: "Traditional temple at Bukit Brown",
+    caption: "Ancient temple in Bukit Brown cemetery",
     category: "landscapes",
   },
   {
     id: "4",
-    imageUrl: LuckyCharmsImage,
-    caption: "Lucky charms found along hiking trails",
+    imageUrl: TalismansImage,
+    caption: "Traditional talismans at Bukit Brown graves",
     category: "wildlife",
   },
   {
     id: "5",
     imageUrl: HendersonWavesImage,
-    caption: "The iconic Henderson Waves bridge",
-    category: "landscapes",
-  },
-  {
-    id: "6",
-    imageUrl: GrayCautionImage,
-    caption: "Caution sign along a forest trail",
-    category: "landscapes",
-  },
-  {
-    id: "7",
-    imageUrl: GrayPuddleJumpImage,
-    caption: "Crossing puddles during a rainforest hike",
-    category: "groups",
-  },
-  {
-    id: "8",
-    imageUrl: GrayMrtInForestImage,
-    caption: "MRT train visible through forest foliage",
+    caption: "The iconic Henderson Waves pedestrian bridge",
     category: "landscapes",
   },
   {
     id: "9",
-    imageUrl: GrayTrialBesideHdbImage,
-    caption: "Urban trail running alongside HDB buildings",
-    category: "landscapes",
+    imageUrl: MonkeyMacritchieImage,
+    caption: "Monkey sighting at MacRitchie Reservoir",
+    category: "wildlife",
   },
   {
     id: "10",
-    imageUrl: GrayRailwayFeetImage,
-    caption: "Walking along abandoned railway tracks",
-    category: "groups",
+    imageUrl: ThompsonParkImage,
+    caption: "Scenic views at Thompson Nature Park",
+    category: "landscapes",
   },
   {
     id: "11",
-    imageUrl: GrayPipelineImage,
-    caption: "Hiking trail along an old pipeline",
+    imageUrl: AbandonedCarBukitBrownImage,
+    caption: "Abandoned car in Bukit Brown forest",
     category: "landscapes",
   },
   {
     id: "12",
-    imageUrl: GrayJurongRailwayTracksOldImage,
-    caption: "Historic Jurong railway tracks",
+    imageUrl: ClementiForestTrailImage,
+    caption: "Lush trail through Clementi Forest",
+    category: "landscapes",
+  },
+  {
+    id: "13",
+    imageUrl: MtFaberKeppelHillImage,
+    caption: "Scenic path at Mount Faber - Keppel Hill",
+    category: "landscapes",
+  },
+  {
+    id: "14",
+    imageUrl: BukitTimahTrialImage,
+    caption: "Trail at Bukit Timah Nature Reserve",
+    category: "landscapes",
+  },
+  {
+    id: "6",
+    imageUrl: OldJurongRailwayImage,
+    caption: "Remnants of old Jurong Railway Line",
+    category: "landscapes",
+  },
+  {
+    id: "7",
+    imageUrl: FormerBukitTimahRailwayImage,
+    caption: "Former Bukit Timah Railway corridor",
+    category: "landscapes",
+  },
+  {
+    id: "15",
+    imageUrl: TampinesEcoGreenImage,
+    caption: "Biodiversity at Tampines Eco Green",
+    category: "landscapes",
+  },
+  {
+    id: "8",
+    imageUrl: GrayPipelineImage,
+    caption: "Pipeline trail through Singapore's green corridor",
     category: "landscapes",
   },
 ];

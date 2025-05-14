@@ -1,6 +1,6 @@
-import { Container } from '@/components/layout/Container';
-import { NAV_LINKS } from '@/lib/constants';
-import { Compass, Instagram, MessageCircle, Mail } from 'lucide-react';
+import { Container } from "@/components/layout/Container";
+import { NAV_LINKS, TRAIL_PACKAGES } from "@/lib/constants";
+import { Compass, Instagram, MessageCircle, Mail } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,25 +16,26 @@ export function Footer() {
               <span className="font-bold text-xl">Hike With Stephen</span>
             </div>
             <p className="text-muted-foreground mb-4">
-              Explore Singapore's hidden natural beauty with expert-guided hiking experiences.
+              Explore Singapore's hidden natural beauty with expert-guided
+              hiking experiences.
             </p>
             <div className="flex gap-3">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                 aria-label="Telegram"
               >
                 <MessageCircle className="h-5 w-5" />
               </a>
-              <a 
-                href="mailto:stephenalvin0912@gmail.com" 
+              <a
+                href="mailto:stephenalvin0912@gmail.com"
                 className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -61,34 +62,40 @@ export function Footer() {
           </div>
 
           {/* Trail Packages */}
-          {/* <div>
+          <div>
             <h3 className="font-semibold text-lg mb-4">Trail Packages</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="#trails" className="text-muted-foreground hover:text-primary transition-colors">
-                  Bukit Timah Nature Reserve
-                </a>
-              </li>
-              <li>
-                <a href="#trails" className="text-muted-foreground hover:text-primary transition-colors">
-                  MacRitchie TreeTop Walk
-                </a>
-              </li>
-              <li>
-                <a href="#trails" className="text-muted-foreground hover:text-primary transition-colors">
-                  Pulau Ubin Adventure
-                </a>
-              </li>
-              <li>
-                <a href="#trails" className="text-muted-foreground hover:text-primary transition-colors">
-                  Southern Ridges Explorer
-                </a>
-              </li>
+              {TRAIL_PACKAGES.slice(0, 4).map((trail) => (
+                <li key={trail.id}>
+                  <a
+                    href="#trails"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {trail.title}
+                  </a>
+                </li>
+              ))}
             </ul>
-          </div> */}
+          </div>
+
+          <div>
+            <h3 className="font-semibold text-lg mb-4 invisible">Trail Packages</h3>
+            <ul className="space-y-2">
+              {TRAIL_PACKAGES.slice(4, 8).map((trail) => (
+                <li key={trail.id}>
+                  <a
+                    href="#trails"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {trail.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Legal */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold text-lg mb-4">Legal</h3>
             <ul className="grid grid-cols-2 gap-2">
               <li>
@@ -112,7 +119,7 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">

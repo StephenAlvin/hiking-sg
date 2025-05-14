@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/shared/SectionHeading';
 import { GALLERY_IMAGES, GALLERY_CATEGORIES } from '@/lib/constants';
@@ -6,8 +6,6 @@ import {
   Dialog,
   DialogContent,
 } from '@/components/ui/dialog';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
@@ -15,6 +13,7 @@ export function Gallery() {
   const [filter, setFilter] = useState('all');
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<{ [key: string]: boolean }>({});
 
   const filteredImages = filter === 'all' 
     ? GALLERY_IMAGES 
@@ -33,6 +32,13 @@ export function Gallery() {
     setCurrentImage((prev) => (prev - 1 + filteredImages.length) % filteredImages.length);
   };
 
+  const handleImageLoad = (imageId: string) => {
+    setLoadedImages(prev => ({
+      ...prev,
+      [imageId]: true
+    }));
+  };
+
   return (
     <section id="gallery" className="py-20 bg-secondary/30">
       <Container>
@@ -42,7 +48,7 @@ export function Gallery() {
         />
 
         {/* Filter Controls */}
-        <div className="mb-8 flex justify-center">
+        {/* <div className="mb-8 flex justify-center">
           <RadioGroup
             defaultValue="all"
             className="flex flex-wrap gap-2 justify-center"
@@ -70,7 +76,7 @@ export function Gallery() {
               </div>
             ))}
           </RadioGroup>
-        </div>
+        </div> */}
 
         {/* Image Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -80,10 +86,21 @@ export function Gallery() {
               className="aspect-square overflow-hidden rounded-lg cursor-pointer group relative"
               onClick={() => openLightbox(index)}
             >
+              <div 
+                className={cn(
+                  "absolute inset-0 bg-gray-200",
+                  loadedImages[image.id] ? "opacity-0" : "opacity-100"
+                )}
+              />
               <img
                 src={image.imageUrl}
                 alt={image.caption}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className={cn(
+                  "w-full h-full object-cover transition-transform duration-300 group-hover:scale-110",
+                  loadedImages[image.id] ? "opacity-100" : "opacity-0"
+                )}
+                loading="lazy"
+                onLoad={() => handleImageLoad(image.id)}
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
                 <p className="text-white p-4 font-medium">{image.caption}</p>

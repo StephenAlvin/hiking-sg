@@ -144,14 +144,16 @@ export function Contact() {
               <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
               <div className="flex gap-4">
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/stepov3rflow/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-6 w-6" />
                 </a>
                 <a 
-                  href="#" 
+                  onClick={() => openWhatsAppContact()}
                   className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                   aria-label="Telegram"
                 >
