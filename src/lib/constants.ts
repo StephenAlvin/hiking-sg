@@ -14,6 +14,10 @@ import GrayTrialBesideHdbImage from "@/assets/gallery/gray_trial-beside-hdb.jpg"
 import GrayRailwayFeetImage from "@/assets/gallery/gray_railway-feet.jpg";
 import GrayPipelineImage from "@/assets/gallery/gray_pipeline.jpg";
 import GrayJurongRailwayTracksOldImage from "@/assets/gallery/gray_jurong-railway-tracks-old.jpg";
+import BukitTimahImage from "@/assets/packages/bukit-timah.webp";
+import TreetopWalkImage from "@/assets/packages/treetop-walk.jpg";
+import PulauUbinImage from "@/assets/packages/pulau-ubin-puaka-hill.jpg";
+import MtFaberImage from "@/assets/packages/mt-faber.jpeg";
 
 export const NAV_LINKS: NavLink[] = [
   { id: "home", title: "Home", href: "#hero" },
@@ -45,8 +49,7 @@ export const TRAIL_PACKAGES: TrailPackage[] = [
       "Personal insurance",
       "Additional food/drinks",
     ],
-    imageUrl:
-      "https://images.pexels.com/photos/773088/pexels-photo-773088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imageUrl: BukitTimahImage,
   },
   {
     id: "macritchie",
@@ -68,8 +71,7 @@ export const TRAIL_PACKAGES: TrailPackage[] = [
       "Personal insurance",
       "Additional food/drinks",
     ],
-    imageUrl:
-      "https://images.pexels.com/photos/4673515/pexels-photo-4673515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imageUrl: TreetopWalkImage,
   },
   {
     id: "pulau-ubin",
@@ -91,8 +93,7 @@ export const TRAIL_PACKAGES: TrailPackage[] = [
       "Personal insurance",
       "Additional activities",
     ],
-    imageUrl:
-      "https://images.pexels.com/photos/5241063/pexels-photo-5241063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imageUrl: PulauUbinImage,
   },
   {
     id: "southern-ridges",
@@ -114,8 +115,7 @@ export const TRAIL_PACKAGES: TrailPackage[] = [
       "Personal insurance",
       "Additional food/drinks",
     ],
-    imageUrl:
-      "https://images.pexels.com/photos/4673748/pexels-photo-4673748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imageUrl: MtFaberImage,
   },
 ];
 

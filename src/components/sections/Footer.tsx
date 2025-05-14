@@ -46,7 +46,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="grid grid-cols-2 gap-2">
               {NAV_LINKS.map((link) => (
                 <li key={link.id}>
                   <a
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
 
           {/* Trail Packages */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold text-lg mb-4">Trail Packages</h3>
             <ul className="space-y-2">
               <li>
@@ -85,15 +85,15 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Legal */}
           <div>
             <h3 className="font-semibold text-lg mb-4">Legal</h3>
-            <ul className="space-y-2">
+            <ul className="grid grid-cols-2 gap-2">
               <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Terms & Conditions
+                  T&C
                 </a>
               </li>
               <li>

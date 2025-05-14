@@ -4,6 +4,7 @@ import { NAV_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Compass } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { openWhatsAppContact } from '@/utilities';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,7 +52,7 @@ export function Header() {
                 {link.title}
               </a>
             ))}
-            <Button className={isScrolled ? "" : "bg-primary text-primary-foreground hover:bg-primary/90"}>Book Your Trail</Button>
+            <Button onClick={openWhatsAppContact} className={isScrolled ? "" : "bg-primary text-primary-foreground hover:bg-primary/90"}>Book Your Trail</Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -78,7 +79,7 @@ export function Header() {
                   {link.title}
                 </a>
               ))}
-              <Button className="mt-2">Book Your Trail</Button>
+              <Button onClick={openWhatsAppContact} className="mt-2">Book Your Trail</Button>
             </nav>
           </div>
         )}

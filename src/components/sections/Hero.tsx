@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Container } from '@/components/layout/Container';
 import { ArrowRight } from 'lucide-react';
 import HeroImage from '@/assets/hero-image.jpg';
+import { openWhatsAppContact } from '@/utilities';
 
 export function Hero() {
   return (
@@ -33,12 +34,17 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up animation-delay-200">
-            <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black">
+            <Button onClick={openWhatsAppContact} size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black">
               Start Your Adventure
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-primary hover:bg-white/20">
-              Explore Trails
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-primary hover:bg-white/20 hover:text-white"
+              asChild
+            >
+              <a href="#trails">Explore Trails</a>
             </Button>
           </div>
         </div>

@@ -18,6 +18,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
+import { openWhatsAppContact } from '@/utilities';
 
 export function TrailPackages() {
   const getDifficultyColor = (difficulty: string) => {
@@ -109,7 +110,7 @@ export function TrailPackages() {
               </CardContent>
               
               <CardFooter>
-                <Button className="w-full">Book Now</Button>
+                <Button onClick={openWhatsAppContact} className="w-full">Book Now</Button>
               </CardFooter>
             </Card>
           ))}
