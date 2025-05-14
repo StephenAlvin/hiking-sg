@@ -18,7 +18,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
-import { openWhatsAppContact } from '@/utilities';
+import { openWhatsAppContact } from '@/lib/utils';
 
 export function TrailPackages() {
   const getDifficultyColor = (difficulty: string) => {
@@ -34,6 +34,14 @@ export function TrailPackages() {
       default:
         return 'bg-blue-500';
     }
+  };
+
+  // Function to handle booking for a specific trail
+  const handleBookTrail = (trailTitle: string) => {
+    openWhatsAppContact({
+      subject: `Booking for ${trailTitle}`,
+      message: `I would like to book the ${trailTitle} trail. Please provide me with available dates and additional information.`
+    });
   };
 
   return (
@@ -110,7 +118,7 @@ export function TrailPackages() {
               </CardContent>
               
               <CardFooter>
-                <Button onClick={openWhatsAppContact} className="w-full">Book Now</Button>
+                <Button onClick={() => handleBookTrail(trail.title)} className="w-full">Book Now</Button>
               </CardFooter>
             </Card>
           ))}

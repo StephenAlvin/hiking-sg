@@ -11,8 +11,30 @@ import {
   Instagram, 
   MessageCircle 
 } from 'lucide-react';
+import { useState, FormEvent } from 'react';
+import { openWhatsAppContact } from '@/lib/utils';
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    openWhatsAppContact(formData);
+  };
+
   return (
     <section id="contact" className="py-20 bg-secondary/30">
       <Container>
@@ -24,21 +46,37 @@ export function Contact() {
         <div className="grid md:grid-cols-2 gap-10">
           {/* Contact Form */}
           <div className="bg-card p-6 rounded-lg shadow-sm">
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="name">Your Name</Label>
-                  <Input id="name" placeholder="John Doe" />
+                  <Input 
+                    id="name" 
+                    placeholder="John Doe"
+                    value={formData.name}
+                    onChange={handleChange} 
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" />
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="john@example.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="Trail inquiry" />
+                <Input 
+                  id="subject" 
+                  placeholder="Trail inquiry"
+                  value={formData.subject}
+                  onChange={handleChange}
+                />
               </div>
               
               <div className="space-y-2">
@@ -47,6 +85,8 @@ export function Contact() {
                   id="message" 
                   placeholder="Tell me about what you're looking for..." 
                   rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
                 />
               </div>
               

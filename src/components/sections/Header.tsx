@@ -3,8 +3,7 @@ import { Container } from '@/components/layout/Container';
 import { NAV_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Compass } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { openWhatsAppContact } from '@/utilities';
+import { cn, openWhatsAppContact } from '@/lib/utils';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,6 +17,13 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleBookTrail = () => {
+    openWhatsAppContact({
+      subject: "Trail Booking Inquiry",
+      message: "Hello Stephen, I'd like to book a trail. Could you please provide more information on availability and pricing?"
+    });
+  };
 
   return (
     <header
@@ -52,7 +58,7 @@ export function Header() {
                 {link.title}
               </a>
             ))}
-            <Button onClick={openWhatsAppContact} className={isScrolled ? "" : "bg-primary text-primary-foreground hover:bg-primary/90"}>Book Your Trail</Button>
+            <Button onClick={handleBookTrail} className={isScrolled ? "" : "bg-primary text-primary-foreground hover:bg-primary/90"}>Book Your Trail</Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -79,7 +85,7 @@ export function Header() {
                   {link.title}
                 </a>
               ))}
-              <Button onClick={openWhatsAppContact} className="mt-2">Book Your Trail</Button>
+              <Button onClick={handleBookTrail} className="mt-2">Book Your Trail</Button>
             </nav>
           </div>
         )}
