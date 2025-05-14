@@ -5,9 +5,6 @@ import { GALLERY_IMAGES, GALLERY_CATEGORIES } from '@/lib/constants';
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
 } from '@/components/ui/dialog';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';

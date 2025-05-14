@@ -10,7 +10,7 @@ import {
   CardHeader, 
   CardTitle 
 } from '@/components/ui/card';
-import { Clock, Check, X, ChevronDown } from 'lucide-react';
+import { Clock, Check, X } from 'lucide-react';
 import { 
   Accordion,
   AccordionContent,
