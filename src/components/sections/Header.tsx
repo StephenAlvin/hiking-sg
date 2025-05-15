@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Container } from '@/components/layout/Container';
 import { NAV_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Compass } from 'lucide-react';
+import { Menu, X, Compass, Footprints } from 'lucide-react';
 import { cn, openWhatsAppContact } from '@/lib/utils';
 
 export function Header() {
@@ -38,7 +38,7 @@ export function Header() {
         <div className="flex items-center justify-between py-5">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <Compass className={cn("h-8 w-8", isScrolled ? "text-primary" : "text-white")} />
+            <Footprints className={cn("h-8 w-8 mx-1", isScrolled ? "text-primary" : "text-white")} />
             <span className={cn("font-bold text-xl md:text-2xl", isScrolled ? "" : "text-white")}>Hike With Me</span>
           </a>
 
