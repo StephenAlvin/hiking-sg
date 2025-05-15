@@ -22,7 +22,6 @@ import OldJurongRailwayImage from "@/assets/gallery/gray_old-jurong-railway.jpg"
 import FormerBukitTimahRailwayImage from "@/assets/gallery/gray_former-bukit-timah-railway.jpg";
 import GrayPipelineImage from "@/assets/gallery/gray_pipeline.jpg";
 import TampinesEcoGreenImage from "@/assets/gallery/gray_tampines-eco-green.jpg";
-import TampinesEcoGreen2Image from "@/assets/gallery/gray_tampines-eco-green-2.jpg";
 
 // Packages
 import GrayPuddleJumpImage from "@/assets/packages/gray_puddle-jump.jpg";
