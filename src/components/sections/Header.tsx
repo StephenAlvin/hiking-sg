@@ -39,7 +39,7 @@ export function Header() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <Compass className={cn("h-8 w-8", isScrolled ? "text-primary" : "text-white")} />
-            <span className={cn("font-bold text-xl md:text-2xl", isScrolled ? "" : "text-white")}>Hike With Stephen</span>
+            <span className={cn("font-bold text-xl md:text-2xl", isScrolled ? "" : "text-white")}>Hike With Me</span>
           </a>
 
           {/* Desktop Navigation */}

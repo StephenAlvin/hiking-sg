@@ -13,7 +13,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Compass className="h-8 w-8 text-primary" />
-              <span className="font-bold text-xl">Hike With Stephen</span>
+              <span className="font-bold text-xl">Hike With Me</span>
             </div>
             <p className="text-muted-foreground mb-4">
               Explore Singapore's hidden natural beauty with expert-guided
@@ -123,7 +123,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {currentYear} HikeWithStephen. All rights reserved.</p>
+          <p>© {currentYear} Hike With Me. All rights reserved.</p>
         </div>
       </Container>
     </footer>
