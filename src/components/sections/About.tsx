@@ -1,7 +1,7 @@
 import { Container } from "@/components/layout/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Check } from "lucide-react";
-import AboutMeImage from "@/assets/about-me.jpg";
+import AboutMeImage from "@/assets/about-me.webp";
 
 export function About() {
   const expertise = [

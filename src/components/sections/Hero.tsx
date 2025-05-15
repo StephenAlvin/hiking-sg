@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/layout/Container';
 import { ArrowRight } from 'lucide-react';
-import HeroImage from '@/assets/hero-image.jpg';
+import HeroImage from '@/assets/hero-image.webp';
 import { openWhatsAppContact } from '@/lib/utils';
 
 export function Hero() {
