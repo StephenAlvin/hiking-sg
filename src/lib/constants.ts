@@ -45,6 +45,7 @@ export const NAV_LINKS: NavLink[] = [
 const defaultIncluded = [
   "Professional guide",
   "Water bottle",
+  "Insect repellent",
   "Hiking pole",
   "Photos from the hike",
 ];
@@ -58,9 +59,9 @@ const defaultExcluded = [
 export const TRAIL_PACKAGES: TrailPackage[] = [
   {
     id: "personalized-experience",
-    title: "Custom Made",
+    title: "🎁 Custom Made",
     description:
-      "I will tailor a hike to your interests and fitness level, uniquely for you.",
+      "Highly recommended! I will tailor a hike to your interests and fitness level, uniquely for you.",
     price: "50~",
     duration: "Custom",
     difficulty: "Custom",
@@ -160,7 +161,7 @@ export const TESTIMONIALS: TestimonialType[] = [
     name: "John Lee",
     rating: 5,
     comment:
-      "Our hike through Clementi Forest was so informative and fun! Stephen shared fascinating stories about Singapore's nature.",
+      "Our hike through Clementi Forest was so informative and fun! Stephen shared fascinating stories about Singapore's history",
     trail: "Clementi Forest",
     imageUrl: JohnImage,
   },
@@ -169,8 +170,8 @@ export const TESTIMONIALS: TestimonialType[] = [
     name: "Maya",
     rating: 5,
     comment:
-      "Bukit Brown was a great hike! Stephen was very knowledgeable and shared interesting stories about the history of the area.",
-    trail: "Bukit Brown Avatar Trees",
+      "Keppel Hill was a great hike! It was a decently tough but rewarding, especially the first steep bit, but Stephen was very patient and helped me up",
+    trail: "Keppel Hill",
     imageUrl: MayaImage,
   },
   {

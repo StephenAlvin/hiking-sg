@@ -59,7 +59,7 @@ export function TrailPackages() {
               className="overflow-hidden group hover:shadow-lg transition-all"
             >
               <div className="h-56 overflow-hidden relative">
-                <Badge className={`${getDifficultyColor(trail.difficulty)} absolute top-2 right-2 shadow-lg`}>
+                <Badge className={`${getDifficultyColor(trail.difficulty)} absolute top-2 right-2 shadow-lg z-10`}>
                   {trail.difficulty}
                 </Badge>
                 <img
