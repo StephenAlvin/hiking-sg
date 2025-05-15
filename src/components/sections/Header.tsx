@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Container } from '@/components/layout/Container';
 import { NAV_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Compass, Footprints } from 'lucide-react';
+import { Menu, X, Footprints } from 'lucide-react';
 import { cn, openWhatsAppContact } from '@/lib/utils';
 
 export function Header() {
