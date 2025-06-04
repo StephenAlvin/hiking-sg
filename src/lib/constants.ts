@@ -25,13 +25,13 @@ import TampinesEcoGreenImage from "@/assets/gallery/gray_tampines-eco-green.jpg"
 
 // Packages
 import GrayPuddleJumpImage from "@/assets/packages/gray_puddle-jump.jpg";
-import PulauUbinImage from "@/assets/packages/pulau-ubin-puaka-hill.jpg";
-import ClementiForestImage from "@/assets/packages/clementi-forest.jpg";
-import KeppelHillImage from "@/assets/packages/keppel-hill.jpg";
-import AvatarTreesImage from "@/assets/packages/avatar-trees.jpg";
-import MandaiT15Image from "@/assets/packages/mandai-t15.jpg";
-import ChestnutNatureParkImage from "@/assets/packages/chestnut-tower.jpg";
-import PipelineTrailImage from "@/assets/packages/pipeline-trail.jpg";
+// import PulauUbinImage from "@/assets/packages/pulau-ubin-puaka-hill.jpg";
+// import ClementiForestImage from "@/assets/packages/clementi-forest.jpg";
+// import KeppelHillImage from "@/assets/packages/keppel-hill.jpg";
+// import AvatarTreesImage from "@/assets/packages/avatar-trees.jpg";
+// import MandaiT15Image from "@/assets/packages/mandai-t15.jpg";
+// import ChestnutNatureParkImage from "@/assets/packages/chestnut-tower.jpg";
+// import PipelineTrailImage from "@/assets/packages/pipeline-trail.jpg";
 
 export const NAV_LINKS: NavLink[] = [
   { id: "home", title: "Home", href: "#hero" },
