@@ -52,11 +52,11 @@ export function TrailPackages() {
           subtitle="Escape the crowds through Singapore's most serene and untouched trails"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex flex-col justify-center items-center">
           {TRAIL_PACKAGES.map((trail) => (
             <Card
               key={trail.id}
-              className="overflow-hidden group hover:shadow-lg transition-all"
+              className="overflow-hidden group hover:shadow-lg transition-all max-w-lg"
             >
               <div className="h-56 overflow-hidden relative">
                 <Badge className={`${getDifficultyColor(trail.difficulty)} absolute top-2 right-2 shadow-lg z-10`}>
