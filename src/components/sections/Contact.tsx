@@ -132,8 +132,8 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium">Phone/WhatsApp</p>
-                    <a href="tel:+6591234567" className="text-primary hover:underline">
-                      +65 9123 4567
+                    <a href="tel:+6596503241" className="text-primary hover:underline">
+                      +65 9650 3241
                     </a>
                   </div>
                 </div>
